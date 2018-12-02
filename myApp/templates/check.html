@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Check</title>
+    <style type="text/css">
+    	body,html{
+    		margin:0px;
+    	}
+   		.header{
+   			position:fixed;
+   			background:#aaf;
+   			color:white;
+   			width:100%;
+   			padding:10px;
+   			text-align: center;
+   		}
+    	.customer{
+    		position:relative;
+    		float:left;
+    		clear:right;
+    		margin-top:50px;
+    		padding:10px;
+    	}
+    	.item{
+    		margin-left:90px;
+    		position:relative;
+    		clear:left;
+    		float:left;
+    		margin-bottom:5px;
+    	}
+	</style>
+</head>
+<body>
+<form method=POST enctype=multipart/form-data action="{{ url_for('check') }}">
+	<div class="header">AXIS BANK AI CHALLENGE</div>
+	<div class="customer">CustomerID:<input type="text" name="custId"><br></div>
+    <div class="item"><input type=file name=photo1><br></div>
+    <div class="item"><input type="submit"><br></div>
+</form>
+</body>
+</html>
